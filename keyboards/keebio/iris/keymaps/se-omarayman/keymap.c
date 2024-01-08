@@ -13,16 +13,16 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   ADJUST,
-NUM_1,
-NUM_2,
-NUM_3,
-NUM_4,
-NUM_5,
-NUM_6,
-NUM_7,
-NUM_8,
-NUM_9,
-NUM_0,
+  NUM_1,
+  NUM_2,
+  NUM_3,
+  NUM_4,
+  NUM_5,
+  NUM_6,
+  NUM_7,
+  NUM_8,
+  NUM_9,
+  NUM_0,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -99,22 +99,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    static uint8_t shift_mask;
-
+  static uint8_t shift_mask;
   switch (keycode) {
-
     case NUM_1:
       if (record->event.pressed) {
-          shift_mask = get_mods() & MOD_MASK_SHIFT;
-          if (shift_mask) {
-              del_mods(MOD_MASK_SHIFT);
-              tap_code(KC_1); // Outputs '1' when Shift is held
-              set_mods(shift_mask);
-          } else {
-              tap_code16(S(KC_9)); // Outputs original key function
-          }
+        shift_mask = get_mods() & MOD_MASK_SHIFT;
+        if (shift_mask) {
+            del_mods(MOD_MASK_SHIFT);
+            tap_code(KC_1); // Outputs '1' when Shift is held
+            set_mods(shift_mask);
+        } else {
+            tap_code16(S(KC_9)); // Outputs original key function
+        }
       }
       return false;
+
     case NUM_2:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -127,6 +126,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_3:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -139,6 +139,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_4:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -151,6 +152,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_5:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -163,6 +165,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_6:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -175,6 +178,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_7:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -187,6 +191,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_8:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
@@ -199,6 +204,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
       }
       return false;
+
     case NUM_9:
       if (record->event.pressed) {
           shift_mask = get_mods() & MOD_MASK_SHIFT;
