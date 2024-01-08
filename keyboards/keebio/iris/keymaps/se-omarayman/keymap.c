@@ -33,13 +33,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     S(KC_1), S(KC_5), KC_LBRC, S(KC_LBRC),S(KC_9),S(KC_8),                               KC_EQL,    S(KC_0),    S(KC_RBRC),    KC_RBRC,    S(KC_7),    KC_BSLS,
+     S(KC_1), S(KC_5), KC_LBRC, S(KC_LBRC),S(KC_9),S(KC_8),                           KC_EQL,  S(KC_0), S(KC_RBRC),KC_RBRC,S(KC_7),KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB,  KC_SCLN, KC_COMM, KC_DOT,  KC_P,     KC_Y,                               KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_BSPC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,    KC_H,    KC_T,    KC_N,    KC_S, SC_SENT,
+     KC_BSPC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,    KC_H,    KC_T,     KC_N,    KC_S,    SC_SENT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,          KC_LALT,  KC_B,    KC_M,    KC_W, KC_V,  KC_Z, KC_MINS,
+     KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,        KC_LALT,  KC_B,   KC_M,    KC_W,     KC_V,    KC_Z,   KC_MINS,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     MO(1), KC_LGUI,   KC_RCTL,                    KC_RCTL,  KC_SPC,   MO(1)
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
