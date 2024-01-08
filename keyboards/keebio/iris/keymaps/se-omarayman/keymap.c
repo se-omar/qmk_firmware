@@ -3,7 +3,7 @@
 
 #include QMK_KEYBOARD_H
 
-#define _QWERTY 0
+#define _DVORAK 0
 #define _LOWER 2
 #define _RAISE 3
 #define _ADJUST 4
@@ -17,7 +17,7 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  // [_QWERTY] = LAYOUT(
+  // [_DVORAK] = LAYOUT(
   // //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
   //    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   // //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                               // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   // ),
 
-  [_QWERTY] = LAYOUT(
+  [_DVORAK] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      S(KC_1), S(KC_5), KC_LBRC, S(KC_LBRC),S(KC_9),S(KC_8),                           KC_EQL,  S(KC_0), S(KC_RBRC),KC_RBRC,S(KC_7),KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case QWERTY:
       if (record->event.pressed) {
-        set_single_persistent_default_layer(_QWERTY);
+        set_single_persistent_default_layer(_DVORAK);
       }
       return false;
       break;
