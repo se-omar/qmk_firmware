@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY, KC_MPRV,  KC_MNXT,                            KC_PLUS, _______, _______, _______, _______, _______,
+     KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY, KC_MPRV,  KC_MNXT,                            _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_PGUP, S(KC_3),KC_BSLS, S(KC_BSLS),_______, KC_DEL,                          KC_PSCR, RGB_TOG, _______, _______, KC_RGHT, KC_BRIU,
+     KC_PGUP, S(KC_3),KC_BSLS, S(KC_BSLS),S(KC_7), KC_DEL,                          KC_PSCR, RGB_TOG, _______, _______, KC_RGHT, KC_BRIU,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_PGDN,  S(KC_1), S(KC_2), KC_GRV, S(KC_GRV),S(KC_4),                           S(KC_6), KC_LEFT, _______, _______, _______, KC_BRID,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -199,7 +199,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
               tap_code(KC_8); // Outputs '1' when Shift is held
               set_mods(shift_mask);
           } else {
-              tap_code16(S(KC_7)); // Outputs original key function
+              tap_code16(KC_PLUS); // Outputs original key function
           }
       }
       return false;
