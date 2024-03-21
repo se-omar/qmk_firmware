@@ -29,17 +29,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // [_DVORAK] = LAYOUT(
   // //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-  //    S(KC_1), S(KC_5), KC_LBRC, S(KC_LBRC),S(KC_9),S(KC_8),                           KC_EQL,  S(KC_0), S(KC_RBRC),KC_RBRC,S(KC_7),KC_BSLS,
+  //    S(KC_1),  NUM_7,   NUM_5,   NUM_3,   NUM_1,   NUM_9,                              NUM_0,   NUM_2,   NUM_4,   NUM_6,   NUM_8,  KC_MINS,
   // //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
   //    KC_TAB,  KC_SCLN, KC_COMM, KC_DOT,  KC_P,     KC_Y,                               KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH,
   // //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-  //    KC_BSPC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,    KC_H,    KC_T,     KC_N,    KC_S,    SC_SENT,
+  //    KC_BSPC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,    KC_H,    KC_T,     KC_N,    KC_S,    KC_ENT,
   // //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-  //    KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,        KC_LALT,  KC_B,   KC_M,    KC_W,     KC_V,    KC_Z,   KC_MINS,
+  //    KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,        KC_LALT,  KC_B,   KC_M,    KC_W,     KC_V,    KC_Z,   KC_RSFT,
   // //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-  //                                   MO(1), KC_LGUI,   KC_RCTL,                    KC_RCTL,  KC_SPC,   MO(1)
+  //                                   MO(1), KC_LGUI,   KC_LCTL,                    KC_RCTL,  KC_SPC,   MO(1)
   //                               // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   // ),
+
   [_DVORAK] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      S(KC_1),  NUM_7,   NUM_5,   NUM_3,   NUM_1,   NUM_9,                              NUM_0,   NUM_2,   NUM_4,   NUM_6,   NUM_8,  KC_MINS,
@@ -48,9 +49,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_BSPC, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                               KC_D,    KC_H,    KC_T,     KC_N,    KC_S,    KC_ENT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,        KC_LALT,  KC_B,   KC_M,    KC_W,     KC_V,    KC_Z,   KC_RSFT,
+     KC_LSFT, KC_QUOT,    KC_Q,    KC_J,    KC_K,    KC_X,    KC_ESC,        KC_LGUI,  KC_B,   KC_M,    KC_W,     KC_V,    KC_Z,   KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    MO(1), KC_LGUI,   KC_LCTL,                    KC_RCTL,  KC_SPC,   MO(1)
+                                    MO(1),   KC_LALT,   KC_LCTL,                 KC_RCTL,  KC_SPC,   MO(1)
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
